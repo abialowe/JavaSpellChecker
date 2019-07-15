@@ -1,0 +1,32 @@
+README 
+
+P01-- Spelling Checker
+
+This project was to implement a spelling checker that could determine if a word is spelled
+correctly. If not spelled correctly, the program should give a list of potential correct
+spellings based on a set of rules. 
+
+SpellCheck checks for three main types of misspellings--
+	1) Swapped letters, if the user has pulled a dumb-dumb and misspelled a word by just
+	a letter that is close to it, it will correct it. 
+	EX) STROM instead of STORM, although STROM is a very fun word. 
+	
+	2) Inserted letters, for those who accidentally put an extra letter, this program 
+	doesn't judge. If you put HELLOO and appear just a little too eager, this program will
+	fix it right up to HELLO and take you back to a calm and not lame typing style. 
+	
+	3) Missing letters, in case you just really wanted to type STORM, but ended up with
+	STOM, STOM will be no more and this program will correct it to STORM. Poor STOM. 
+
+The implementation of this project does use the required hash-based set. The way I went about
+this program was probably a more complicated way than necessary, but it made sense to me to go 
+about making a spell checker this way. 
+There are 3 classes, first class being SpellCheck. This class is the main class (i know it's not
+named driver i apologize), and also holds the beginning input with an added, MYSTIFYING choice
+option where the user picks first to either enter a word, or to exit. Then from there the word is 
+entered. 
+The second class is the Misspell class, where most of the dirty work occurs for actually figuring 
+out the suggestions to be offered by checking the last letter, first letter, or any mix in between
+of just a small slip up by the user rather than a totally incorrect spelling.
+The third class, WordFinder, looks for where the mistakes are in the word to point them out in the
+output, and to see if the word was totally butchered or not. 
